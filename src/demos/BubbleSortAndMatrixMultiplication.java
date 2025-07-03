@@ -12,7 +12,7 @@ public class BubbleSortAndMatrixMultiplication {
     }
 
     private static void multiplyMatrices(Scanner scanner) {
-        int[][] productMatrix = new int[0][0];
+        int[][] productMatrix;
         while (true) {
             int matrixCounter = 1;
             System.out.print("Введите количество строк " + matrixCounter + " матрицы: ");
