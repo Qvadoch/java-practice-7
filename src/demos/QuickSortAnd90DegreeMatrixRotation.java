@@ -35,19 +35,9 @@ public class QuickSortAnd90DegreeMatrixRotation {
     }
 
     private static void sortArray(Scanner scanner) {
-        System.out.print("Введите длину массива: ");
-        int arrayLength = scanner.nextInt();
-        if (arrayLength <= 0) {
-            System.out.println("Длина массива должна быть положительным числом");
-            return;
-        }
+        int arrayLength = ArrayUtils.getArrayLengthFromUser(scanner);
 
-        Integer[] array = new Integer[arrayLength];
-        System.out.println("Введите элементы массива:");
-        for (int i = 0; i < arrayLength; i++) {
-            System.out.print("Элемент " + (i + 1) + ": ");
-            array[i] = scanner.nextInt();
-        }
+        Integer[] array = ArrayUtils.createAndFillArray(scanner);
 
         System.out.print("Массив до сортировки: ");
         ArrayUtils.printArray(array);
