@@ -32,8 +32,7 @@ public class ArrayUtils {
         return length;
     }
 
-    public static Integer[] createAndFillArray(Scanner scanner) {
-        int length = getArrayLengthFromUser(scanner);
+    public static Integer[] createAndFillArray(Scanner scanner, int length) {
         Integer[] array = new Integer[length];
         System.out.println("Введите элементы массива:");
         for (int i = 0; i < length; i++) {

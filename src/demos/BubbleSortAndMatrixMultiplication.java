@@ -54,7 +54,9 @@ public class BubbleSortAndMatrixMultiplication {
     }
 
     private static void sortArray(Scanner scanner) {
-        Integer[] array = ArrayUtils.createAndFillArray(scanner);
+        int arrayLength = ArrayUtils.getArrayLengthFromUser(scanner);
+
+        Integer[] array = ArrayUtils.createAndFillArray(scanner, arrayLength);
 
         System.out.print("Массив до сортировки: ");
         ArrayUtils.printArray(array);

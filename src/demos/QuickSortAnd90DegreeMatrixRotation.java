@@ -37,7 +37,7 @@ public class QuickSortAnd90DegreeMatrixRotation {
     private static void sortArray(Scanner scanner) {
         int arrayLength = ArrayUtils.getArrayLengthFromUser(scanner);
 
-        Integer[] array = ArrayUtils.createAndFillArray(scanner);
+        Integer[] array = ArrayUtils.createAndFillArray(scanner, arrayLength);
 
         System.out.print("Массив до сортировки: ");
         ArrayUtils.printArray(array);
