@@ -23,7 +23,7 @@ public class QuickSortAnd90DegreeMatrixRotation {
         }
 
         int[][] matrix = new int[rows][cols];
-        MatrixOperations.fillMatrix(scanner, matrix, rows, cols);
+        MatrixOperations.fillMatrixByUser(scanner, matrix, rows, cols);
 
         System.out.println("Исходная матрица:");
         MatrixOperations.printMatrix(matrix);

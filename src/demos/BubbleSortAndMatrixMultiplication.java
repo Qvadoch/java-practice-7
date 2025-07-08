@@ -26,7 +26,7 @@ public class BubbleSortAndMatrixMultiplication {
             }
 
             int[][] firstMatrix = new int[rows][cols];
-            MatrixOperations.fillMatrix(scanner, firstMatrix, rows, cols);
+            MatrixOperations.fillMatrixByUser(scanner, firstMatrix, rows, cols);
             System.out.println("Вид 1 матрицы");
             MatrixOperations.printMatrix(firstMatrix);
 
@@ -38,7 +38,7 @@ public class BubbleSortAndMatrixMultiplication {
             int cols2 = scanner.nextInt();
 
             int[][] secondMatrix = new int[rows2][cols2];
-            MatrixOperations.fillMatrix(scanner, secondMatrix, rows2, cols2);
+            MatrixOperations.fillMatrixByUser(scanner, secondMatrix, rows2, cols2);
             System.out.println("Вид 2 матрицы");
             MatrixOperations.printMatrix(secondMatrix);
 

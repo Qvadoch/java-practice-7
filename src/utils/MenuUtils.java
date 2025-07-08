@@ -6,12 +6,13 @@ import java.util.Scanner;
 public class MenuUtils {
     public static void showMenu(Scanner scanner, Integer[] array) {
         while (true) {
-            System.out.print("\n---Меню---\n" +
-                    "1 - Поиск числа по индексу\n" +
-                    "2 - Сортировка по возрастанию\n" +
-                    "3 - Сортировка по убыванию\n" +
-                    "4 - Выход\n" +
-                    "Выберите действие: ");
+            System.out.print("""
+                    ---Меню---
+                    1 - Поиск числа по индексу
+                    2 - Сортировка по возрастанию
+                    3 - Сортировка по убыванию
+                    4 - Выход
+                    Выберите действие:\s""");
 
             int choice = scanner.nextInt();
 
