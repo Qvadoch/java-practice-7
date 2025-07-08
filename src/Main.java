@@ -1,12 +1,16 @@
 import demos.BubbleSortAndMatrixMultiplication;
+import demos.InsertionSortAndMaxRowSum;
 import demos.MergeSortAndMatrixMaxElement;
 import demos.QuickSortAnd90DegreeMatrixRotation;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
         System.out.println("Выберите программу:");
         System.out.println("1 - Поворот матрицы на 90 градусов и быстрая сортировка");
         System.out.println("2 - Умножение матриц и пузырьковая сортировка");
@@ -27,7 +31,11 @@ public class Main {
                 break;
             case 3:
                 System.out.println("Сначала находим максимальный элемент матрицы, а потом реализация сортировки слиянием.");
-                MergeSortAndMatrixMaxElement.run(scanner);
+                MergeSortAndMatrixMaxElement.run(scanner, random);
+                break;
+            case 4:
+                System.out.println("Сначала находим строку с максимальной суммой элементов матрицы, а потом реализация сортировки вставкой.");
+                InsertionSortAndMaxRowSum.run(scanner, random);
                 break;
             default:
                 System.out.println("Такого у нас нет");

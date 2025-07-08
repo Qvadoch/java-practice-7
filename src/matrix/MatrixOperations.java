@@ -44,4 +44,24 @@ public class MatrixOperations {
         }
         return  "Максимальное число массива: " + maxElement + "\nИндекс строки: " + indexRow + "\nИндекс столбца: " + indexColumn;
     }
+
+    public static int[] findRowWithMaxSum(int[][] matrix) {
+
+        int maxSum = 0;
+        int maxRowIndex = 0;
+
+        for (int i = 0; i < matrix.length; i++) {
+            int currentRowSum = 0;
+            for (int j = 0; j < matrix[i].length; j++) {
+                currentRowSum += matrix[i][j];
+            }
+
+            if (currentRowSum > maxSum) {
+                maxSum = currentRowSum;
+                maxRowIndex = i;
+            }
+        }
+
+        return new int[]{maxRowIndex, maxSum};
+    }
 }
