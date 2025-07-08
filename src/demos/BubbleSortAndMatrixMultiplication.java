@@ -67,7 +67,7 @@ public class BubbleSortAndMatrixMultiplication {
         ArrayUtils.printArray(array);
         System.out.println();
 
-        BubbleSort.sort(array);
+        BubbleSort.bubbleSort(array);
 
         System.out.print("Массив после сортировки: ");
         for (int num : array) {

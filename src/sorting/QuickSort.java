@@ -3,11 +3,11 @@ package sorting;
 import utils.ArrayUtils;
 
 public class QuickSort {
-    public static void sort(Integer[] array, int low, int high) {
+    public static void quickSort(Integer[] array, int low, int high) {
         if (low < high) {
             int pivotIndex = partition(array, low, high);
-            sort(array, low, pivotIndex - 1);
-            sort(array, pivotIndex + 1, high);
+            quickSort(array, low, pivotIndex - 1);
+            quickSort(array, pivotIndex + 1, high);
         }
     }
 

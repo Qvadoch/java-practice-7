@@ -8,7 +8,7 @@ import utils.MenuUtils;
 import java.util.Random;
 import java.util.Scanner;
 
-public class InsertionSortAndMaxRowSum {
+public class InsertionSortAndMatrixMaxRowSum {
     public static void run(Scanner scanner, Random random) {
         maxRowSum(scanner, random);
         sortArray(scanner);

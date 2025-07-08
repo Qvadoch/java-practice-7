@@ -64,4 +64,14 @@ public class MatrixOperations {
 
         return new int[]{maxRowIndex, maxSum};
     }
+
+    public static int[][] matrixTransposition(int[][] matrix, int rows, int cols) {
+        int[][] newMatrix = new int[cols][rows];
+        for (int i = 0; i < cols; i++) {
+            for (int j = 0; j < rows; j++) {
+                newMatrix[i][j] = matrix[j][i];
+            }
+        }
+        return newMatrix;
+    }
 }

@@ -43,7 +43,7 @@ public class QuickSortAnd90DegreeMatrixRotation {
         System.out.print("Массив до сортировки: ");
         ArrayUtils.printArray(array);
 
-        QuickSort.sort(array, 0, arrayLength - 1);
+        QuickSort.quickSort(array, 0, arrayLength - 1);
 
         System.out.print("Массив после сортировки: ");
         ArrayUtils.printArray(array);
