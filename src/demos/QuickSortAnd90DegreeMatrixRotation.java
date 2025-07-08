@@ -14,11 +14,12 @@ public class QuickSortAnd90DegreeMatrixRotation {
     private static void rotateMatrix(Scanner scanner) {
         System.out.print("Введите количество строк матрицы: ");
         int rows = scanner.nextInt();
+
         System.out.print("Введите количество столбцов матрицы: ");
         int cols = scanner.nextInt();
 
-        if (rows != cols) {
-            System.out.println("Матрица должна быть квадратной для поворота на 90 градусов");
+        if (rows <= 1 || cols <= 1) {
+            System.out.println("Количество строк или столбцов матрицы должно быть больше единицы");
             return;
         }
 

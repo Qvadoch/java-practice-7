@@ -9,8 +9,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MergeSortAndMatrixMaxElement {
-    public static void run(Scanner scanner) {
-        searchMaxElementMatrix(scanner);
+    public static void run(Scanner scanner, Random random) {
+        searchMaxElementMatrix(scanner, random);
         sortArray(scanner);
     }
 
@@ -30,23 +30,27 @@ public class MergeSortAndMatrixMaxElement {
         MenuUtils.showMenu(scanner, array);
     }
 
-    private static void searchMaxElementMatrix(Scanner scanner) {
-        Random random = new Random();
+    private static void searchMaxElementMatrix(Scanner scanner, Random random) {
 
         System.out.print("Введите кол-во строк матрицы: ");
-        int row = scanner.nextInt();
+        int rows = scanner.nextInt();
 
         System.out.print("Введите кол-во столбцов матрицы: ");
-        int column = scanner.nextInt();
+        int cols = scanner.nextInt();
 
-        int[][] matrix = new int[row][column];
+        if (rows <= 1 || cols <= 1) {
+            System.out.println("Количество строк или столбцов матрицы должно быть больше единицы");
+            return;
+        }
 
-        MatrixOperations.randomFillMatrix(random, matrix, row, column);
+        int[][] matrix = new int[rows][cols];
+
+        MatrixOperations.randomFillMatrix(random, matrix, rows, cols);
 
         System.out.println("Вид матрицы");
         MatrixOperations.printMatrix(matrix);
 
-        String string = MatrixOperations.findAndDescribeMaxElement(matrix, row, column);
+        String string = MatrixOperations.findAndDescribeMaxElement(matrix, rows, cols);
         System.out.println(string);
     }
 }

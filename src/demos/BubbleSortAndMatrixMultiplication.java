@@ -37,6 +37,11 @@ public class BubbleSortAndMatrixMultiplication {
             System.out.print("Введите количество столбцов " + matrixCounter + " матрицы: ");
             int cols2 = scanner.nextInt();
 
+            if (rows2 <= 1 || cols2 <= 1) {
+                System.out.println("Количество строк или столбцов матрицы должно быть больше единицы");
+                continue;
+            }
+
             int[][] secondMatrix = new int[rows2][cols2];
             MatrixOperations.fillMatrixByUser(scanner, secondMatrix, rows2, cols2);
             System.out.println("Вид 2 матрицы");
