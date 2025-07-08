@@ -1,7 +1,4 @@
-import demos.BubbleSortAndMatrixMultiplication;
-import demos.InsertionSortAndMaxRowSum;
-import demos.MergeSortAndMatrixMaxElement;
-import demos.QuickSortAnd90DegreeMatrixRotation;
+import demos.*;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -16,6 +13,7 @@ public class Main {
         System.out.println("2 - Умножение матриц и пузырьковая сортировка");
         System.out.println("3 - Поиск максимального числа в матрице и сортировка слиянием");
         System.out.println("4 - Поиск строки с максимальной суммой элементов в матрице и сортировка вставкой");
+        System.out.println("5 - Транспонирование матрицы и сортировка выбором");
         System.out.print("Ваш выбор: ");
 
         int choice = scanner.nextInt();
@@ -35,7 +33,11 @@ public class Main {
                 break;
             case 4:
                 System.out.println("Сначала находим строку с максимальной суммой элементов матрицы, а потом реализация сортировки вставкой.");
-                InsertionSortAndMaxRowSum.run(scanner, random);
+                InsertionSortAndMatrixMaxRowSum.run(scanner, random);
+                break;
+            case 5:
+                System.out.println("Сначала транспонирование матрицы, а потом реализация сортировки выбором.");
+                SelectionSortAndMatrixTransposition.run(scanner);
                 break;
             default:
                 System.out.println("Такого у нас нет");
