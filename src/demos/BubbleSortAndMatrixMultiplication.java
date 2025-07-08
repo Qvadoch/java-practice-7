@@ -26,9 +26,9 @@ public class BubbleSortAndMatrixMultiplication {
             }
 
             int[][] firstMatrix = new int[rows][cols];
-            MatrixOperations.fillMatrixByUser(scanner, firstMatrix, rows, cols);
+            MatrixIO.fillMatrixByUser(scanner, firstMatrix, rows, cols);
             System.out.println("Вид 1 матрицы");
-            MatrixOperations.printMatrix(firstMatrix);
+            MatrixIO.printMatrix(firstMatrix);
 
             matrixCounter++;
 
@@ -43,14 +43,14 @@ public class BubbleSortAndMatrixMultiplication {
             }
 
             int[][] secondMatrix = new int[rows2][cols2];
-            MatrixOperations.fillMatrixByUser(scanner, secondMatrix, rows2, cols2);
+            MatrixIO.fillMatrixByUser(scanner, secondMatrix, rows2, cols2);
             System.out.println("Вид 2 матрицы");
-            MatrixOperations.printMatrix(secondMatrix);
+            MatrixIO.printMatrix(secondMatrix);
 
             if (cols == rows2) {
                 productMatrix = MatrixMultiplication.multiply(firstMatrix, secondMatrix, rows, cols, cols2);
                 System.out.println("Результат умножения:");
-                MatrixOperations.printMatrix(productMatrix);
+                MatrixIO.printMatrix(productMatrix);
             } else {
                 System.out.println("Ошибка: количество столбцов первой матрицы должно быть равно количеству строк второй матрицы");
             }

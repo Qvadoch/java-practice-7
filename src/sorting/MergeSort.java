@@ -19,7 +19,7 @@ public class MergeSort {
         return merge(left, right);
     }
 
-    public static Integer[] merge(Integer[] left, Integer[] right) {
+    private static Integer[] merge(Integer[] left, Integer[] right) {
         int i = 0; int j = 0; int k = 0;
         Integer[] result = new Integer[left.length + right.length];
 

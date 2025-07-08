@@ -1,6 +1,7 @@
 package demos;
 
-import matrix.MatrixOperations;
+import matrix.MatrixAnalyzer;
+import matrix.MatrixIO;
 import sorting.MergeSort;
 import utils.ArrayUtils;
 import utils.MenuUtils;
@@ -45,12 +46,12 @@ public class MergeSortAndMatrixMaxElement {
 
         int[][] matrix = new int[rows][cols];
 
-        MatrixOperations.randomFillMatrix(random, matrix, rows, cols);
+        MatrixIO.randomFillMatrix(random, matrix, rows, cols);
 
         System.out.println("Вид матрицы");
-        MatrixOperations.printMatrix(matrix);
+        MatrixIO.printMatrix(matrix);
 
-        String string = MatrixOperations.findAndDescribeMaxElement(matrix, rows, cols);
+        String string = MatrixAnalyzer.findAndDescribeMaxElement(matrix, rows, cols);
         System.out.println(string);
     }
 }

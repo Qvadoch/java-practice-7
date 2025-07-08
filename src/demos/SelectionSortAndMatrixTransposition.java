@@ -1,6 +1,7 @@
 package demos;
 
-import matrix.MatrixOperations;
+import matrix.MatrixIO;
+import matrix.MatrixTransformation;
 import sorting.SelectionSort;
 import utils.ArrayUtils;
 import utils.MenuUtils;
@@ -26,15 +27,15 @@ public class SelectionSortAndMatrixTransposition {
         }
 
         int[][] matrix = new int[rows][cols];
-        MatrixOperations.fillMatrixByUser(scanner, matrix, rows, cols);
+        MatrixIO.fillMatrixByUser(scanner, matrix, rows, cols);
 
         System.out.println("Исходная матрица:");
-        MatrixOperations.printMatrix(matrix);
+        MatrixIO.printMatrix(matrix);
 
-        int[][] newMatrix = MatrixOperations.matrixTransposition(matrix, rows, cols);
+        int[][] newMatrix = MatrixTransformation.matrixTransposition(matrix, rows, cols);
 
         System.out.println("Матрица после поворота на 90 градусов:");
-        MatrixOperations.printMatrix(newMatrix);
+        MatrixIO.printMatrix(newMatrix);
     }
 
     private static void sortArray(Scanner scanner) {

@@ -1,6 +1,7 @@
 package demos;
 
-import matrix.MatrixOperations;
+import matrix.MatrixAnalyzer;
+import matrix.MatrixIO;
 import sorting.InsertionSort;
 import utils.ArrayUtils;
 import utils.MenuUtils;
@@ -44,11 +45,11 @@ public class InsertionSortAndMatrixMaxRowSum {
 
         int[][] matrix = new int[rows][cols];
 
-        MatrixOperations.randomFillMatrix(random, matrix, rows, cols);
+        MatrixIO.randomFillMatrix(random, matrix, rows, cols);
 
-        MatrixOperations.printMatrix(matrix);
+        MatrixIO.printMatrix(matrix);
 
-        int[] maxRowInfo = MatrixOperations.findRowWithMaxSum(matrix);
+        int[] maxRowInfo = MatrixAnalyzer.findRowWithMaxSum(matrix);
         System.out.println("Строка с максимальной суммой: " + (maxRowInfo[0] + 1));
         System.out.println("Сумма этой строки: " + maxRowInfo[1]);
     }

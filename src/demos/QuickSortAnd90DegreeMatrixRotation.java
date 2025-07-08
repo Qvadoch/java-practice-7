@@ -24,15 +24,15 @@ public class QuickSortAnd90DegreeMatrixRotation {
         }
 
         int[][] matrix = new int[rows][cols];
-        MatrixOperations.fillMatrixByUser(scanner, matrix, rows, cols);
+        MatrixIO.fillMatrixByUser(scanner, matrix, rows, cols);
 
         System.out.println("Исходная матрица:");
-        MatrixOperations.printMatrix(matrix);
+        MatrixIO.printMatrix(matrix);
 
-        int[][] rotatedMatrix = MatrixRotation.rotate90Degrees(matrix, rows, cols);
+        int[][] rotatedMatrix = MatrixTransformation.rotate90Degrees(matrix, rows, cols);
 
         System.out.println("Матрица после поворота на 90 градусов:");
-        MatrixOperations.printMatrix(rotatedMatrix);
+        MatrixIO.printMatrix(rotatedMatrix);
     }
 
     private static void sortArray(Scanner scanner) {
